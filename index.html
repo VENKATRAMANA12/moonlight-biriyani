@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tirutani Moon Light Briyani | Authentic Dum Biriyani</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- AMBIENT STARFIELD & GLOWING MOON -->
+    <div class="ambient-stars"></div>
+    <div class="glowing-moon" title="Moon Light"></div>
+
+    <!-- TOP HEADER -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="javascript:void(0)" class="brand-logo" onclick="switchView('home')">
+                <div class="moon-logo-icon">🌙</div>
+                <div class="brand-text">
+                    <span class="brand-title">TIRUTANI MOON LIGHT</span>
+                    <span class="brand-subtitle">BIRIYANI • TIRUTTANI</span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAVIGATION TABS -->
+            <nav class="nav-links">
+                <button class="nav-tab-btn active" onclick="switchView('home')"><i class="fa-solid fa-house"></i> Home</button>
+                <button class="nav-tab-btn" onclick="switchView('menu')"><i class="fa-solid fa-utensils"></i> Menu</button>
+                <button class="nav-tab-btn" onclick="switchView('reviews')"><i class="fa-solid fa-star"></i> Reviews</button>
+                <button class="nav-tab-btn" onclick="switchView('contact')"><i class="fa-solid fa-phone"></i> Contact</button>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-trigger-btn" id="openCartBtn" aria-label="View Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+                <a href="https://wa.me/919585207044" target="_blank" class="nav-whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP VIEWPORTS -->
+    <main class="app-view-container">
+
+        <!-- 1. HOME VIEW (WITH SMALL CORNER BANNER IMAGE) -->
+        <section id="view-home" class="view-panel active">
+            <div class="hero-container">
+                
+                <!-- TOP HEADER ROW WITH CORNER IMAGE BADGE -->
+                <div class="hero-header-row">
+                    <div class="hero-header-left">
+                        <div class="hero-badge">
+                            <span class="pulse-dot"></span> Daily Evening 6:30 PM Onwards[cite: 14]
+                        </div>
+                        <h1 class="hero-title">
+                            Taste That Makes You <br>
+                            <span class="gradient-text-blue">Crave More</span> with <span class="gradient-text-green">Pure Dum Love</span>
+                        </h1>
+                    </div>
+
+                    <!-- SMALL CORNER IMAGE PREVIEW -->
+                    <div class="hero-corner-poster" onclick="openPosterModal()" title="Tap to view special offer poster">
+                        <img src="banner.jpg" alt="Tirutani Moon Light Special Offer Poster" class="corner-poster-img">
+                        <span class="poster-tap-pill"><i class="fa-solid fa-expand"></i> Offer</span>
+                    </div>
+                </div>
+                
+                <p class="hero-description">
+                    Welcome to <strong>Tirutani Moon Light Briyani</strong>! Savor hot wood-fired <strong>Chicken Biriyani (₹120)</strong> and tender <strong>Beef Biriyani (₹120)</strong>, along with our fresh evening starters like Beef Tawa Curry, Chicken Fry, and Beef Fry[cite: 14].
+                </p>
+
+                <div class="hero-cta-group">
+                    <button class="btn-primary-green" onclick="switchView('menu')">
+                        <i class="fa-solid fa-utensils"></i> Explore Menu & Order
+                    </button>
+                    <button class="btn-secondary-blue" onclick="switchView('reviews')">
+                        <i class="fa-solid fa-star"></i> Customer Reviews
+                    </button>
+                </div>
+
+                <!-- LOCATION CARD ON HOME -->
+                <div class="home-location-card">
+                    <div class="home-loc-icon">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div class="home-loc-text">
+                        <h4><i class="fa-solid fa-location-dot text-green"></i> Hotel Location</h4>
+                        <p><strong>Chithoor Main Road, PWD Office</strong>, Tiruttani[cite: 14]</p>
+                        <span class="home-timing-tag"><i class="fa-regular fa-clock"></i> Daily Time: Evening 6:30 PM Onwards[cite: 14]</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/z6DBposy1JpGzyGM9" target="_blank" class="btn-map-sm">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Open Maps
+                    </a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="stat-card" onclick="switchView('menu')">
+                        <i class="fa-solid fa-drumstick-bite icon-blue"></i>
+                        <div class="stat-info">
+                            <h4>Chicken Biriyani</h4>
+                            <p>Only ₹120 / Plate</p>
+                        </div>
+                    </div>
+                    <div class="stat-card" onclick="switchView('menu')">
+                        <i class="fa-solid fa-bowl-rice icon-green"></i>
+                        <div class="stat-info">
+                            <h4>Beef Biriyani</h4>
+                            <p>Only ₹120 / Plate</p>
+                        </div>
+                    </div>
+                    <div class="stat-card" onclick="switchView('contact')">
+                        <i class="fa-brands fa-whatsapp icon-green"></i>
+                        <div class="stat-info">
+                            <h4>WhatsApp Direct</h4>
+                            <p>Tap Balaji to Order</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MENU VIEW -->
+        <section id="view-menu" class="view-panel">
+            <div class="view-header">
+                <span class="sub-heading"><i class="fa-solid fa-fire"></i> Fresh Evening Batches</span>
+                <h2 class="main-heading">Special <span class="text-blue">Biriyani</span> & <span class="text-green">Menu Card</span></h2>
+                <p class="section-desc">Add your favorites to the cart and send your custom order directly to Balaji on WhatsApp.</p>
+                
+                <div class="menu-filter-bar">
+                    <button class="filter-btn active" data-category="all">All Specials</button>
+                    <button class="filter-btn" data-category="biriyani">Biriyani</button>
+                    <button class="filter-btn" data-category="sides">Sides & Fry</button>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Injected via script.js -->
+            </div>
+        </section>
+
+        <!-- 3. REVIEWS VIEW -->
+        <section id="view-reviews" class="view-panel">
+            <div class="view-header">
+                <span class="sub-heading"><i class="fa-solid fa-star"></i> Verified Customer Feedback</span>
+                <h2 class="main-heading">Shop <span class="text-blue">Ratings</span> & <span class="text-green">Reviews</span></h2>
+                <p class="section-desc">Share your honest dining and takeaway experience with Tirutani Moon Light Briyani.</p>
+            </div>
+
+            <div class="reviews-summary-card">
+                <div class="rating-big-score">
+                    <span class="big-score-num" id="avgRatingNum">5.0</span>
+                    <div class="stars-row">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-total-text" id="totalReviewsCount">Be the first to review!</span>
+                </div>
+                <button class="btn-primary-green" id="writeReviewBtn">
+                    <i class="fa-solid fa-pen"></i> Write a Review
+                </button>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Injected via script.js -->
+            </div>
+        </section>
+
+        <!-- 4. CONTACT VIEW -->
+        <section id="view-contact" class="view-panel">
+            <div class="view-header">
+                <span class="sub-heading"><i class="fa-solid fa-location-dot"></i> Visit or Order Online</span>
+                <h2 class="main-heading">Get in <span class="text-blue">Touch</span> & <span class="text-green">Location</span></h2>
+                <p class="section-desc">Direct line to master chef Balaji for party orders, special packaging, and table reservations.</p>
+            </div>
+
+            <div class="contact-grid two-cards-grid">
+                <!-- Balaji Card -->
+                <div class="contact-card">
+                    <div class="contact-avatar blue-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Balaji</h3>
+                    <p class="contact-role">Owner & Master Chef</p>
+                    <a href="tel:9585207044" class="phone-link"><i class="fa-solid fa-phone"></i> +91 95852 07044</a>
+                    <a href="https://wa.me/919585207044?text=Hi%20Balaji%2C%20I%20want%20to%20order%20from%20Tirutani%20Moon%20Light%20Briyani" target="_blank" class="btn-whatsapp-sm">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Location Card -->
+                <div class="contact-card location-card">
+                    <div class="contact-avatar moon-avatar"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3>Hotel Location</h3>
+                    <p class="address-text">
+                        <strong>Tirutani Moon Light Briyani</strong><br>
+                        Chithoor Main Road, PWD Office, Tiruttani[cite: 14]
+                    </p>
+                    <p class="timing-badge"><i class="fa-regular fa-clock"></i> Daily Time: Evening 6:30 PM Onwards[cite: 14]</p>
+                    <a href="https://maps.app.goo.gl/z6DBposy1JpGzyGM9" target="_blank" class="btn-map-link">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- EXPANDABLE POSTER LIGHTBOX POPUP -->
+    <div class="modal-overlay" id="posterModalOverlay" onclick="closePosterModal()">
+        <div class="poster-lightbox-content" onclick="event.stopPropagation()">
+            <button class="close-lightbox-btn" onclick="closePosterModal()">&times;</button>
+            <img src="banner.jpg" alt="Special Offer Poster" class="full-poster-img">
+        </div>
+    </div>
+
+    <!-- BOTTOM MOBILE APP-BAR -->
+    <nav class="bottom-mobile-nav">
+        <button class="mobile-tab-btn active" onclick="switchView('home')">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </button>
+        <button class="mobile-tab-btn" onclick="switchView('menu')">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Menu</span>
+        </button>
+        <button class="mobile-tab-btn" onclick="switchView('reviews')">
+            <i class="fa-solid fa-star"></i>
+            <span>Reviews</span>
+        </button>
+        <button class="mobile-tab-btn" onclick="switchView('contact')">
+            <i class="fa-solid fa-phone"></i>
+            <span>Contact</span>
+        </button>
+    </nav>
+
+    <!-- REVIEW SUBMISSION POPUP -->
+    <div class="modal-overlay" id="reviewModalOverlay">
+        <div class="review-modal">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-star text-green"></i> Rate Our Food</h3>
+                <button class="close-modal-btn" id="closeReviewModalBtn">&times;</button>
+            </div>
+            <form id="reviewForm" class="review-modal-form">
+                <div class="input-group">
+                    <label for="reviewerName">Your Name</label>
+                    <input type="text" id="reviewerName" placeholder="e.g. Balaji." required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Select Rating (1 to 5 Stars)</label>
+                    <div class="star-rating-selector" id="starSelector">
+                        <i class="fa-solid fa-star star-opt" data-rating="1"></i>
+                        <i class="fa-solid fa-star star-opt" data-rating="2"></i>
+                        <i class="fa-solid fa-star star-opt" data-rating="3"></i>
+                        <i class="fa-solid fa-star star-opt" data-rating="4"></i>
+                        <i class="fa-solid fa-star star-opt active" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" id="ratingValue" value="5">
+                </div>
+
+                <div class="input-group">
+                    <label for="reviewerDish">Dish Ordered</label>
+                    <select id="reviewerDish">
+                        <option value="Chicken Biriyani (₹120)">Chicken Biriyani (₹120)</option>
+                        <option value="Beef Biriyani (₹120)">Beef Biriyani (₹120)</option>
+                        <option value="Beef Tawa Curry">Beef Tawa Curry</option>
+                        <option value="Chicken Fry">Chicken Fry</option>
+                        <option value="Beef Fry">Beef Fry</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="reviewerFeedback">Your Review</label>
+                    <textarea id="reviewerFeedback" rows="3" placeholder="Share your experience about the taste and food quality..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary-green w-100">
+                    <i class="fa-solid fa-paper-plane"></i> Submit & Alert Balaji
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MOBILE-FRIENDLY CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <div class="cart-title-wrap">
+                <i class="fa-solid fa-bag-shopping text-green"></i>
+                <h3>Your Food Order</h3>
+            </div>
+            <button class="close-cart-btn" id="closeCartBtn" aria-label="Close Cart">&times;</button>
+        </div>
+
+        <div class="cart-items-container" id="cartItemsList"></div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-bill-row">
+                <span>Subtotal</span>
+                <span class="bill-amount" id="cartSubtotal">₹0</span>
+            </div>
+
+            <div class="order-form">
+                <div class="input-group">
+                    <label for="custName"><i class="fa-solid fa-user"></i> Your Name</label>
+                    <input type="text" id="custName" placeholder="e.g. Ramesh" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="pickupTime"><i class="fa-regular fa-clock"></i> Pickup Time</label>
+                    <input type="text" id="pickupTime" placeholder="e.g. 7:30 PM">
+                </div>
+
+                <div class="input-group">
+                    <label for="custNotes"><i class="fa-solid fa-pen"></i> Special Requests</label>
+                    <input type="text" id="custNotes" placeholder="e.g. Extra raitha, spicy gravy">
+                </div>
+            </div>
+
+            <button class="whatsapp-checkout-btn" id="whatsappCheckoutBtn">
+                <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
